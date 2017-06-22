@@ -282,7 +282,7 @@ export default class Placement {
     this.setState('AD_READY');
     if (typeof options.onAdAvailable === 'function') {
       const showAd = () => this.showAd(response, options);
-      options.onAdAvailable(showAd, adMetaInfoFromResponse(response));
+      options.onAdAvailable(showAd, adMetaInfoFromResponse(response), response.url);
     }
   }
 
